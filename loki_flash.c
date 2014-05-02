@@ -115,7 +115,8 @@ int loki_flash(const char* partition_label, const char* loki_image)
 
 	if (!match) {
 		printf("[-] Loki aboot version does not match device.\n");
-		return 1;
+		// Version is not matched as compatible, but flashing continues, this should really be toptional:
+		// return 1;
 	}
 
 	printf("[+] Loki validation passed, flashing image.\n");
